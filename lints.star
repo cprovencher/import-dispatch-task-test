@@ -23,7 +23,7 @@ def shellcheck(task_name, paths):
         steps=[k8s.corev1.Container(
             name="shellcheck",
             image="koalaman/shellcheck:v0.7.1",
-            workingDir=git_checkout_dir(git_input),
+            workingDir=git_checkout_dir(git_dir),
             args=paths
          )])
 
