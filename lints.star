@@ -1,6 +1,7 @@
 #!mesosphere/dispatch-starlark:v0.6
 
 load("github.com/mesosphere/dispatch-catalog/starlark/stable/pipeline@0.0.6", "git_checkout_dir")
+load("github.com/mesosphere/dispatch-catalog/starlark/stable/git@0.0.7", "git_resource")
 
 git_dir = "src-git"
 git_resource(git_dir, url="$(context.git.url)", revision="$(context.git.branch)")
