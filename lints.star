@@ -25,7 +25,7 @@ def shellcheck(task_name, paths):
             name="shellcheck",
             image="koalaman/shellcheck:v0.7.1",
             workingDir=git_checkout_dir(git_dir),
-            args=paths
+            args=["$(context.git.tag)"]
          )])
 
     return task_name
